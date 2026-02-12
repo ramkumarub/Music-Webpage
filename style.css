@@ -1,0 +1,464 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    overflow-x: hidden;
+}
+:root
+{
+    --primary-color: #FF00FF;
+    --secondary-color: rgb(250, 250, 250);
+    --teritory-color: #00fff2b6;
+
+    --main-font: "Dancing Script", cursive;
+    --heading-font: "Montserrat", sans-serif;
+}
+#home
+{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background:linear-gradient( #003f7f77, rgb(149, 0, 25, 0.5)), url(./assets/home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 0.5rem;
+}
+#home nav
+{
+    background: transparent;
+    font-family: var(--heading-font);
+}
+.logo a
+{
+    display: inline-block;
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-size: 2rem;
+    text-shadow: 8px 8px 8px #000000;
+}
+.logo a:hover
+{
+    color: var(--primary-color);
+    animation: moveUp 0.4s ease forwards;
+}
+#navbarSupportedContent .nav-link
+{
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-shadow: 5px 5px 5px #000000;
+}
+.nav-link.active
+{
+    color: var(--primary-color) !important;
+}
+#navbarSupportedContent .nav-link:hover
+{
+    color: var(--primary-color);
+    animation: moveUp 0.4s ease forwards;
+}
+.navbar .navbar-toggler .navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fafafa' stroke-linecap='sharp' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.social-icon a
+{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-shadow: 5px 5px 5px #000000;
+}
+.social-icon a:hover
+{
+    color: var(--primary-color);
+    animation: moveUp 0.4s ease forwards;
+}
+.hero-section .display-2
+{
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    text-shadow: 5px 5px 5px var(--teritory-color);
+}
+.hero-section .h1
+{
+    font-family: var(--main-font);
+    background: linear-gradient( to top left, var(--secondary-color), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-section .btn
+{
+    border: 2px solid var(--teritory-color);
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    padding: 0rem 1.3rem;
+    box-shadow: 0 0 5px 2px var(--teritory-color);
+}
+.hero-section .btn a
+{
+    color: var(--secondary-color);
+}
+.hero-section .btn:hover a
+{
+    color: black;
+}
+.hero-section .btn:hover
+{
+    background-color: var(--teritory-color);
+    animation: moveUp 0.4s ease forwards;
+}
+#artist .scrollup
+{
+    padding: 0.5rem;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+}
+#artist .scrollup a
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#artist .scrollup i
+{
+    color: var(--secondary-color);
+}
+#artist, #genre, #tracks, #gallery, #contact
+{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient( #003f7f77, rgb(149, 0, 25, 0.5)), url(./assets/artist/artist-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 3rem 6rem;
+}
+#artist .heading, #genre .heading, #tracks .heading, #gallery .heading, #contact .heading
+{
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    text-shadow: 3px 3px 3px var(--primary-color);
+}
+#artist .line, #genre .line, #tracks .line, #gallery .line, #contact .line
+{
+    width: 4rem;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 3px 3px 3px var(--teritory-color);
+}
+#artist .odd .card, #genre .odd .card, #tracks .odd .card, #contact .odd .card, #contact .form-control
+{
+    background: transparent;
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#artist .even .card, #genre .even .card, #tracks .even .card, #contact .even .card
+{
+    background: transparent;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 6px 3px var(--primary-color);
+}
+#artist .odd .img-top, #tracks .odd .img-top
+{
+    height: 75%;
+    width: 75%;
+    background: transparent;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 6px 3px var(--primary-color);
+}
+#artist .even .img-top, #tracks .even .img-top
+{
+    height: 75%;
+    width: 75%;
+    background: transparent;
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#artist .card-title, #genre .card-title, #tracks .card-title
+{
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+}
+#artist .odd .card-sub-heading, #genre .odd .card-sub-heading, #tracks .odd .card-sub-heading
+{
+    font-family: var(--main-font);
+    color: var(--teritory-color);
+}
+#artist .even .card-sub-heading, #genre .even .card-sub-heading, #tracks .even .card-sub-heading
+{
+    font-family: var(--main-font);
+    color: var(--primary-color);
+}
+#genre .odd .card-sub-heading
+{
+    font-family: var(--main-font);
+    color: var(--primary-color);
+}
+#genre .even .card-sub-heading
+{
+    font-family: var(--main-font);
+    color: var(--teritory-color);
+}
+#artist .card-text, #genre .card-text
+{
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+#artist .odd .card .btn, #genre .odd .card .btn
+{
+    border: 2px solid var(--primary-color);
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px 2px var(--primary-color);
+}
+#artist .even .card .btn, #genre .even .card .btn
+{
+    border: 2px solid var(--teritory-color);
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px 2px var(--teritory-color);
+}
+#artist .card .btn a, #genre .card .btn a
+{
+    color: var(--secondary-color);
+}
+#artist .card .btn:hover a, #genre .card .btn:hover a
+{
+    color: black;
+}
+#artist .odd .card .btn:hover, #genre .odd .card .btn:hover
+{
+    background-color: var(--primary-color);
+    animation: moveUp 0.4s ease forwards;
+}
+#artist .even .card .btn:hover, #genre .even .card .btn:hover
+{
+    background-color: var(--teritory-color);
+    animation: moveUp 0.4s ease forwards;
+}
+#tracks .odd .btn
+{
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 6px 3px var(--primary-color);
+}
+#tracks .even .btn
+{
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#tracks #custome-range::-webkit-slider-runnable-track
+{
+    height: 0.3rem;
+}
+#tracks .odd #custome-range::-webkit-slider-thumb
+{
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 3px 1px var(--primary-color);
+}
+#tracks .even #custome-range::-webkit-slider-thumb
+{
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: aqua;
+    box-shadow: 0 0 3px 1px aqua;
+}
+#tracks .track-length
+{
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+}
+#tracks .artist
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}
+#tracks .duration
+{
+    white-space: nowrap;
+}
+#gallery .carousel-control-prev-icon, .carousel-control-next-icon
+{
+    transform: scale(2);
+    color: var(--secondary-color);
+}
+#contact .location iframe
+{
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#contact .odd
+{
+    font-family: var(--heading-font);
+}
+#contact .odd .nav-link
+{
+    height: 3.2rem; 
+    width: 3.2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 6px 3px var(--primary-color);
+}
+#contact .odd .nav-link-main span
+{
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+#contact .odd .nav-link i
+{
+    font-size: 0.9rem;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+#contact .nav-link:hover
+{
+    background-color: var(--primary-color);
+}
+#contact .form-control
+{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    background: transparent;
+    border: 3px solid var(--teritory-color);
+    box-shadow: 0 0 6px 3px var(--teritory-color);
+}
+#contact .form-control::placeholder
+{
+    font-size: 0.8rem;
+    color: rgba(250, 250, 250, 0.5);
+    font-family: var(--heading-font);
+}
+#contact .form-control:focus
+{
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 6px 3px var(--primary-color);
+}
+#contact .send-message
+{
+    border: 2px solid var(--teritory-color);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    box-shadow: 0 0 5px 2px var(--teritory-color);
+}
+#contact .send-message:hover
+{
+    color: black;
+    background-color: var(--teritory-color);
+    animation: moveUp 0.4s ease forwards;
+}
+#footer
+{
+    min-height: 30vh;
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient( #003f7f77, rgb(149, 0, 25, 0.5)), url(./assets/artist/artist-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+}
+#footer .h1
+{
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    text-shadow: 5px 5px 5px var(--primary-color);
+}
+#footer .h2
+{
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+}
+#footer .nav-link-main
+{
+    font-family: var(--heading-font);
+}
+#footer .nav-link-main i:hover
+{
+    color: var(--teritory-color);
+}
+#footer .nav-link-main span:hover
+{
+    color: var(--teritory-color);
+}
+#footer .nav-link, .nav-link a
+{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+#footer .nav-link a:hover
+{
+    color: var(--teritory-color);
+}
+#footer hr
+{
+    border: none;
+    height: 2px;
+    background-color: var(--secondary-color);
+    opacity: 1.0;
+    box-shadow: 1px 1px 3px var(--teritory-color);
+}
+#footer .copyright
+{
+    font-size: 500;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+}
+
+@keyframes moveUp 
+{
+    from
+    {
+        transform: translatey(0px);
+    }
+    to
+    {
+        transform: translatey(-10px);
+    }
+}
+@media screen and (max-width: 992px)
+{
+    html
+    {
+        font-size: 90%;
+    }
+    .social-icon a
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 576px)
+{
+    html
+    {
+        font-size: 80%;
+    }
+    #artist .line, #genre .line, #tracks .line
+    {
+        width: 3rem;
+        border: 1px solid var(--secondary-color);
+        box-shadow: 3px 3px 3px var(--teritory-color);
+    }
+}
